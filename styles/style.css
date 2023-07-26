@@ -1,12 +1,14 @@
 :root {
-  --clr-background: var(--clr-gray); /* insert background color */
+  --clr-background: radial-gradient(
+    circle,
+    rgba(0, 50, 255, 1) 0%,
+    rgba(9, 145, 254, 1) 100%
+  ); /* insert background color */
 
   /* colors, picked from tailwindcss */
   --clr-light: #f8fafc;
   --clr-dark: #0f172a;
   --clr-gray: #94a3b8;
-  --clr-orange: #fb923c;
-  --clr-red: #f87171;
 
   /* sizes */
   --size-xxs: 0.5rem;

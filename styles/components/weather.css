@@ -1,0 +1,71 @@
+/* css for weather card */
+
+/* weather container */
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  height: 35rem;
+}
+/* weather box */
+.weather__box {
+  border-radius: 2rem;
+  width: 19rem;
+  height: 32rem;
+  background: var(--clr-light);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* header of box, contains location + time*/
+.weather__header {
+  display: flex;
+  width: 90%;
+  margin-top: 1rem;
+  font-size: var(--size-sm);
+}
+
+.weather__location {
+  width: 74%;
+}
+
+.weather__time {
+  text-align: right;
+  width: 25%;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .weather__box {
+    width: 24rem;
+  }
+
+  .weather__header {
+    font-size: var(--size-base);
+  }
+
+  .weather__location {
+    width: 90%;
+  }
+
+  .weather__time {
+    width: 50%;
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */

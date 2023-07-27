@@ -39,6 +39,7 @@ html {
 
 body {
   background: var(--clr-background);
+  font-family: "Satoshi", sans-serif;
 }
 
 img,

@@ -21,3 +21,5 @@ function loadCurrTime() {
 }
 
 loadCurrTime();
+// refreshes time every 5 seconds
+setInterval(loadCurrTime, 5 * 1000);

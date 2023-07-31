@@ -1,14 +1,20 @@
 :root {
-  --clr-background: radial-gradient(
+  /* --clr-background: radial-gradient(
     circle,
     rgba(0, 50, 255, 1) 0%,
-    rgba(9, 145, 254, 1) 100%
-  ); /* insert background color */
+    rgba(9, 145, 254, 1) 100% */
+  --clr-background: var(--clr-blue); /* insert background color */
 
   /* colors, picked from tailwindcss */
   --clr-light: #f8fafc;
   --clr-dark: #0f172a;
+  --clr-lightest-gray: #e2e8f0;
+  --clr-light-gray: #cbd5e1;
   --clr-gray: #94a3b8;
+  --clr-blue: #228add;
+  --clr-light-blue: #4ea1e4;
+  --clr-purple: #4345a7;
+  --clr-dark-purple: #353683;
 
   /* sizes */
   --size-xxs: 0.5rem;

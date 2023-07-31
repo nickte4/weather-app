@@ -8,21 +8,26 @@
   margin-top: 4rem;
   height: 35rem;
 }
+
 /* weather box */
 .weather__box {
+  color: var(--clr-light);
   border-radius: 2rem;
   width: 19rem;
   height: 32rem;
-  background: var(--clr-light);
+  background: var(--clr-light-blue);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: start;
+  position: relative;
 }
 
 /* header of box, contains location + time*/
 .weather__header {
+  /* border: 1px red solid; */
   display: flex;
   width: 90%;
+  margin-left: 1rem;
   margin-top: 1rem;
   font-size: var(--size-sm);
 }
@@ -34,6 +39,112 @@
 .weather__time {
   text-align: right;
   width: 25%;
+}
+
+/* container of weather picture */
+.weather__pic_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px red solid; */
+}
+
+/* container of weather degrees */
+.weather__degrees_container {
+  /* border: 1px red solid; */
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.weather__degrees_container h1 {
+  font-size: var(--size-7xl);
+  padding-left: 1rem;
+}
+
+/* white footer of weather card */
+.weather__footer {
+  position: absolute;
+  border: 1px red solid;
+  border-radius: 0rem 0rem 2rem 2rem;
+  background-color: var(--clr-light);
+  width: 100%;
+  height: 10rem;
+  bottom: 0;
+}
+
+/* styling of additional weather data */
+.weather__misc_row1,
+.weather__misc_row2 {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather__misc_row1 {
+  margin-top: 1rem;
+}
+
+.weather__misc_row1 span,
+.weather__misc_row2 span {
+  font-size: var(--size-5xl);
+  color: var(--clr-dark);
+  background-color: var(--clr-lightest-gray);
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.weather__misc_wind_container,
+.weather__misc_precip_container,
+.weather__misc_humidity_container,
+.weather__misc_uvindex_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-light-gray);
+}
+
+.weather__misc_wind_container,
+.weather__misc_precip_container {
+  width: 50%;
+}
+.weather__misc_humidity_container {
+  width: 46%;
+}
+
+.weather__misc_uvindex_container {
+  width: 49%;
+}
+
+.weather__misc_wind_text {
+  font-size: var(--size-sm);
+  margin-left: 0.5rem;
+}
+
+#weather__wind,
+#weather__precipitation,
+#weather__humidity,
+#weather__uvindex {
+  color: var(--clr-dark);
+  font-size: var(--size-lg);
+}
+
+.weather__misc_precip_text {
+  font-size: var(--size-xs);
+  margin-left: 0.5rem;
+}
+
+.weather__misc_humidity_text {
+  font-size: var(--size-sm);
+  margin-left: 0.5rem;
+}
+
+.weather__misc_uvindex_text {
+  font-size: var(--size-sm);
+  margin-left: 0.5rem;
 }
 
 /* xs */
@@ -52,6 +163,32 @@
 
   .weather__time {
     width: 50%;
+  }
+
+  .weather__degrees_container {
+    /* border: 1px red solid; */
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .weather__degrees_container h1 {
+    font-size: var(--size-8xl);
+    padding-left: 2rem;
+  }
+
+  #weather__wind,
+  #weather__precipitation,
+  #weather__humidity,
+  #weather__uvindex {
+    font-size: var(--size-2xl);
+  }
+
+  .weather__misc_humidity_container {
+    width: 50%;
+  }
+
+  .weather__misc_uvindex_container {
+    width: 59%;
   }
 }
 

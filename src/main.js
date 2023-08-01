@@ -21,10 +21,20 @@ function changeToNightMode() {
 
 /* renders additional weather data onto document */
 function renderMiscData(data) {
-  let precipitationChance;
-  let windSpeed; // mph
-  let humidity; // fahrenheit
-  let UVindex; // out of 10
+  /* extract data from json */
+  let windSpeed = data.windSpeedAvg; // mph
+  let precipitationChance = data.precipitationProbabilityAvg;
+  let humidity = data.humidityAvg; // fahrenheit
+  let UVindex = data.uvIndexAvg; // out of 10
+
+  /* update textContent of misc data */
+  document.getElementById("weather__wind").textContent =
+    Math.round(windSpeed) + " mph";
+  document.getElementById("weather__precipitation").textContent =
+    Math.round(precipitationChance) + "%";
+  document.getElementById("weather__humidity").textContent =
+    Math.round(humidity) + "%";
+  document.getElementById("weather__uvindex").textContent = UVindex + "/10";
 }
 
 /* render degrees onto document */
@@ -45,11 +55,11 @@ function renderPicture(todayCode) {
 async function getAndRenderWeatherData() {
   const response = await fetch(WEATHER_API_URL);
   const data = await response.json();
-  console.log(data);
-  // grabs the weather code of the current day (goes up to next four days)
-  console.log(data.timelines.daily[0].values.weatherCodeMax);
-  renderPicture(data.timelines.daily[0].values.weatherCodeMax);
-  renderDegrees(data.timelines.daily[0].values.temperatureAvg);
+  const todayData = data.timelines.daily[0].values;
+
+  renderPicture(todayData.weatherCodeMax);
+  renderDegrees(todayData.temperatureAvg);
+  renderMiscData(todayData);
 }
 
 /* loads the current time*/
@@ -80,7 +90,7 @@ function deployAll() {
   loadCurrTime();
   // refreshes time every 5 seconds
   setInterval(loadCurrTime, 5 * 1000);
-  // getAndRenderWeatherData(); // API CALL, disabled due to rate limiting
+  getAndRenderWeatherData(); // API CALL, disabled due to rate limiting
 }
 
 deployAll();

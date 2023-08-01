@@ -90,7 +90,7 @@ function deployAll() {
   loadCurrTime();
   // refreshes time every 5 seconds
   setInterval(loadCurrTime, 5 * 1000);
-  getAndRenderWeatherData(); // API CALL, disabled due to rate limiting
+  // getAndRenderWeatherData(); // API CALL, disabled due to rate limiting
 }
 
 deployAll();

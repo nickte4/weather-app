@@ -7,7 +7,7 @@ import "../styles/utils.css";
 /* const, global vars */
 // weather codes suffix: '0' => day, '1' => night
 let isDay = 0;
-const LOCATION = "43219";
+const LOCATION = "43219 US";
 const UNITS = "imperial";
 const API_KEY = "3ZWiuIKuEA1fS4w8g9704ILIuJEwtbpO";
 const WEATHER_API_URL = `https://api.tomorrow.io/v4/weather/forecast?location=${LOCATION}&timesteps=1d&units=${UNITS}&apikey=${API_KEY}`;
@@ -90,7 +90,7 @@ function deployAll() {
   loadCurrTime();
   // refreshes time every 5 seconds
   setInterval(loadCurrTime, 5 * 1000);
-  // getAndRenderWeatherData(); // API CALL, disabled due to rate limiting
+  getAndRenderWeatherData(); // API CALL, disabled due to rate limiting
 }
 
 deployAll();
